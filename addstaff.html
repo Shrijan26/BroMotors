@@ -1,0 +1,189 @@
+ 
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Service</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row col-md-6 col-md-offset-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center"><h1>Staff Details</h1></div>
+          <div class="panel-body">
+            <form action="addstaff.php"  method="post">
+              <div class="form-group">
+                <label for="formGroupExampleInput">Name</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="NAME">
+                <span></span>
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">domain</label>
+                <input type="text" class="form-control" name="domain" id="domain" placeholder="Domain">
+                <span></span>
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Date</label>
+                <input type="date" class="form-control" name="dt" id="dt" placeholder="Date">
+                <span></span>
+              </div>
+              <input type="submit" class="btn btn-primary">
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+      body{
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+            padding: 10px;
+            font-family: montserrat;
+            background: linear-gradient(120deg,#2396e3,#da2565);
+            height: 100vh;
+            overflow: hidden;   
+      }
+      .panel{
+        margin-left: auto;
+      }
+      .container{
+            position:absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            background-color:white ;
+            border-radius: 10px;
+        }
+        .container h1{
+            font-size: xx-large;
+            text-align: center;
+            padding:10px;
+            border-bottom: 1px solid silver;
+        }
+        .container form{
+
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+       
+        .pass{
+            margin: -5px 0 20px 5px;
+            color: #a6a6a6;
+            cursor: pointer;
+
+
+        }
+        .pass:hover{
+            text-decoration: underline;
+        }
+        input [type ="submit"]{
+            width: 100%;
+            height: 50px;
+            background: #2691d9;
+            border-radius: 25px;
+            font-size: 18px;
+            color:#e9f4fb;
+            font-weight: 700;
+            cursor: pointer;
+           
+        }
+        input [type ="submit"]:hover{
+            border-color: #2691d9;
+            transition: .5s;
+
+        }
+        .btn btn-primary{
+            margin: 30px;
+            text-align:center ;
+            font-size: 16px;
+            color: #666666;
+        }
+        .btn btn-primary a{
+            color:#2691d9;
+            text-decoration: none;
+            
+        }
+        .btn btn-primary a:hover{
+            text-decoration: underline;
+        }
+        panel panel-primary
+        
+      .panel panel-primary{
+            position:absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            background-color:white ;
+            border-radius: 10px;
+        }
+        .panel panel-primary h1{
+            text-align: center;
+            padding:0 0 20px 0;
+            border-bottom: 1px solid silver;
+        }
+        .panel panel-primary form{
+
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        form .form-control{
+            position: relative;
+            border-bottom: 1px solid #adadad;
+            margin: 10px 0;
+        }
+        .form-control input{
+            width: 50%;
+            padding:0 5px;
+            height: 10px;
+            font-size:16px;
+            border:none;
+            background: none ;
+            outline: none;
+        }
+        .form-control label{
+            position:absolute;
+            top: 10%;
+            left: 5px;
+            color:#adadad;
+            transform: translateY(-50%);
+            font-size:  16px;
+            pointer-events: none;
+        }
+        .form-control span::before{
+            content:'';
+            position: absolute;
+            top: 10px;
+            left:0;
+            width: 100%;
+            height: 1px;
+            background: #2691d9;
+            transition: .5s;
+
+        }
+        .form-control input:focus ~ label,
+        .form-control input:valid ~ label{
+            top:-1px;
+            color:#2691d9;}
+            .form-control input:focus ~ span::before,
+        .form-control input:valid ~ span::before{
+            width: 20%;
+        }
+    </style>
+  </body>
+</html> 
+
